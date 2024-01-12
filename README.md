@@ -1,2 +1,2 @@
 
-https://meeshocopy.netlify.app/
+https://meesho-clone-project.netlify.app/
