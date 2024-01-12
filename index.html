@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.meeshosupply.com/web/meesho-logo-fav.png">
+    <link rel="stylesheet" href="./css/homePage.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <title>Meesho</title>
+</head>
+<body> 
+    <!-- Navigation Bar -->
+   <section class="navbar">
+     <div class="uppernav">
+       <a href="index.html"><img
+         src="https://cdn.hevodata.com/customer/logo/8c76f62bd88177a78bb6e2810a244446.png"
+         alt="logo"
+         class="logo"
+       /></a>
+       <div class="navSearch">
+         <img
+           src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png"
+           alt="search"
+           class="NavSearchIcon"
+         />
+         <input
+           type="text"
+           id="keyword"
+           class="searchContainer"
+           placeholder="Get Best Deals Here"
+           onkeypress="handleKeyPress(event)"
+         />
+       </div>
+       <div class="navRightSec">
+         <div class="navAppPromo">
+           <img
+             src="https://i.postimg.cc/sXqr2Fz4/smartphone.png"
+             alt="app"
+             class="navAppIcon"
+           />
+           <span id="tagDwn" > <a href="https://play.google.com/store/apps/details?id=com.meesho.supply">Download App</a>  </span>
+         </div>
+         <span class="navSuplier"> <a href="SignUpPage.html">Become a Supplier</a> </span>
+         <div class="navProfile" onclick="SignUpPage.html">
+           <img
+             src="https://i.postimg.cc/wjtLkcVz/user.png"
+             alt="account"
+             class="navAccountIcon"
+           />
+           <span
+             class="SignUpHover"> <a href="SignUpPage.html">Profile</a> </span
+           >
+         </div>
+         <div class="navcart" onclick="window.location.href='CartPage.html'">
+           <img
+             src="https://i.postimg.cc/sXBgkwMf/bag.png"
+             alt="cart"
+             class="cartIcon"
+           />
+           <span
+             class="SignUpHover"
+             onclick="window.location.href='CartPage.html'"
+             >Cart</span
+           >
+         </div>
+         <div id="cart-item-counter">0</div>
+       </div>
+     </div>
+     <div class="bottomNav">
+       <div class="nav-menu">
+         <ul>
+           <li class="dropdown" onclick="window.location.href='viewall.html'">View All</li>
+           <li class="dropdown" onclick="window.location.href='WomenWestern.html'">Women 
+             <div class="submenu">
+               <div class="subCat">
+                 <span class="catHeading">Topwear</span>
+                 <span>Dresses</span>
+                 <span>Tops</span>
+                 <span>Sweaters</span>
+                 <span>Jumpsuits</span>
+               </div>
+               <div class="subCat" style="margin-left: 1em;">
+                 <span class="catHeading">Bottomwear</span>
+                 <span>Jeans</span>
+                 <span>Jeggings</span>
+                 <span>Palazzos</span>
+                 <span>Shorts</span>
+                 <span>Skirts</span>
+               </div>
+             </div>
+           </li>
+           <li class="dropdown" onclick="window.location.href='jewellery.html'">Jewellery and Accessories
+            <div class="submenu">
+              <div class="subCat">
+                <span class="catHeading">Jewellery</span>
+                <span>Jewellery Set</span>
+                <span>Earings</span>
+                <span>Bangles</span>
+                <span>Necklace</span>
+              </div>
+              <div class="subCat" style="margin-left: 1em;">
+                <span class="catHeading">Women Accessories</span>
+                <span>Handbag</span>
+                <span>Watches</span>
+                <span>Hair Accessories</span>
+                <span>Sunglasses</span>
+                <span>Socks</span>
+              </div>
+            </div>
+            <li class="dropdown" onclick="window.location.href='men.html'">Men
+              <div class="submenu">
+                <div class="subCat">
+                  <span class="catHeading">Topwear</span>
+                  <span>Shirts</span>
+                  <span>T-shirts</span>
+                  <span>Jacket</span>
+                  <span>Hoodies</span>
+                </div>
+                <div class="subCat" style="margin-left: 1em;">
+                  <span class="catHeading">Bottomwear</span>
+                  <span>Jeans</span>
+                  <span>Trackpants</span>
+                  <span>Trousers</span>
+                  
+                </div>
+                <div class="subCat" style="margin-left: 1em;">
+                  <span class="catHeading">Accessories</span>
+                  <span>Belts</span>
+                  <span>Watches</span>
+                  <span>Sunglasses</span>
+                  
+                </div>
+              </div>
+              <li class="dropdown" >Beauty and Health
+                <div class="submenu">
+                  <div class="subCat">
+                    <span class="catHeading">Make Up</span>
+                    <span>Face</span>
+                    <span>Eyes</span>
+                    <span>Lips</span>
+                    <span>Nails</span>
+                  </div>
+                  <div class="subCat" style="margin-left: 1em;">
+                    <span class="catHeading">Wellness</span>
+                    <span>Sanitizer</span>
+                    <span>Oral Care</span>
+                    <span>Hygiene</span>
+                    
+                  </div>
+                </div>
+                <li class="dropdown" >Bags and Footwear
+                  <div class="submenu">
+                    <div class="subCat">
+                      <span class="catHeading">Women Footwear</span>
+                      <span>Footwear</span>
+                      <span>Fats</span>
+                      <span>Bellies</span>
+                      <span>Juttis</span>
+                    </div>
+                    <div class="subCat" style="margin-left: 1em;">
+                      <span class="catHeading">Men Footwear</span>
+                      <span>Sports Shoes</span>
+                      <span>Casual Shoes</span>
+                      <span>formal Shoes</span>
+                      <span>Sandals</span>
+                    </div>
+                    <div class="subCat" style="margin-left: 1em;">
+                      <span class="catHeading">Bags</span>
+                      <span>Women Bags</span>
+                      <span>Men Wallets</span>
+                      <span>Handbags</span>
+                      <span>Slingbags</span>
+                    </div>
+                  </div>
+                  <li class="dropdown" >Home & Kitchen
+                    <div class="submenu">
+                      <div class="subCat">
+                        <span class="catHeading">Home</span>
+                        <span>Furnishing</span>
+                        <span>Bedsheets</span>
+                        <span>Doormats</span>
+                        <span>Curtains</span>
+                        <span>Cushions & Cushion Covers</span>
+                      </div>
+                      <div class="subCat" style="margin-left: 1em;">
+                        <span class="catHeading">Home Decors</span>
+                        <span>All Home Decors</span>
+                        <span>Stickers</span>
+                        <span>Clocks</span>
+                        <span>Showpieces</span>
+                      </div>
+                      <div class="subCat" style="margin-left: 1em;">
+                        <span class="catHeading">Kitchen & Dining</span>
+                        <span>Kitchen Storage</span>
+                        <span>Cookware</span>
+                        <span>Bakeware</span>
+                        
+                      </div>
+                    </div>
+          
+                    <li class="dropdown" >Kids
+                      <div class="submenu">
+                        <div class="subCat">
+                          <span class="catHeading">Toys & Accessories</span>
+                          <span>Soft Toys</span>
+                          <span>Footware</span>
+                          <span>Stationery</span>
+                          <span>Watches</span>
+                          <span>Bags & Backpacks</span>
+                        </div>
+                        <div class="subCat" style="margin-left: 1em;">
+                          <span class="catHeading">All Baby Care</span>
+                          <span>Rompers</span>
+                          <span>Dresses</span>
+                          
+                        </div>
+                        
+                      </div>
+                      <li class="dropdown" >Electronics
+                        <div class="submenu">
+                          <div class="subCat">
+                            <span class="catHeading">Mobile & Accessories</span>
+                            <span>All Mobile & Accessories</span>
+                            <span>Smartwatches</span>
+                            <span>Mobile Holders</span>
+                            <span>Mobile Cases and covers</span>
+                            
+                          
+                          
+                        </div>
+         </ul>
+       </div>
+     </div>
+   </section>
+   <section class="searchWindow">
+     <div class="searchCloseBtn">
+       <img src="" alt="">
+     </div>
+     <div id="searchWindowDiv">
+       
+     </div>
+   </section>
+ <section class="blurBack"></section>
+   <!-- Homepage Design Clone -->
+   <div class="addImg01">
+       <div class="text">
+           <h1>
+           Lowest Prices Best Quality Shopping
+           </h1>
+           <p id="para">50 lakh+ Styles | 650+ categories</p>
+           <a class="pink-box" href="https://play.google.com/store/apps/details?id=com.meesho.supply"><img id="playstore-logo" src="https://cdn-icons-png.flaticon.com/512/300/300218.png"  alt="logo" width="10%"><h5 id="play">Download the Meesho App </h5></a>
+       </div>
+       <div class="image">
+           <img src="https://images.meesho.com/images/marketing/1631722939962.jpg" alt="">
+       </div>
+   </div>
+
+   <div id="CatHeader">
+       <div><hr></div>
+       <div><h1 id="cat">Top Categories to choose from</h1></div>
+       <div><hr></div>
+   </div>
+
+   <div class="addImg02">
+       <div class="threeimg">
+           <div class="firstimg"><img src="https://images-na.ssl-images-amazon.com/images/G/31/img2020/fashion/WA_2020/Ethnic_store/PFkurtas._CB420644046_.jpg" height="400" width="340" alt=""></div>
+           <div class="secondimg"><img src="https://assets.ajio.com/medias/sys_master/root/20220318/HBSV/62342213aeb26921afe285ca/-288Wx360H-463624230-blue-MODEL.jpg" height="300" width="280" alt=""></div>
+           <div class="thirdimg"><img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300887298WHITE_1.jpg?v=1655899932" height="300" width="280" alt=""></div>
+       </div>
+   </div>
+
+   <div class="addImg03">
+       <div id="homeobtn" ><h1>Homecare</h1>
+           <div>.</div>
+           <a id="viewall" href="#">VIEW ALL</a>
+       </div>
+       <div class="imageone">
+           <img src="https://www.ulcdn.net/images/products/334872/original/Soto_Bedsheet_Set_Blue_LP.jpg?1618991729" height="280" width="220">
+           <a href="#"><button id="btn1">BedSheets</button></a>
+       </div>
+       <div class="imageone">
+           <img src="https://www.maharajawhiteline.com/assests/product-images/enlarge-image/5200000950.jpg" height="280" width="220" >
+           <a href="#"><button id="btn1">Kitchenware</button></a>
+       </div>
+       <div class="imageone">
+           <img src="https://5.imimg.com/data5/KR/UZ/IQ/SELLER-4239241/room-carpet-1000x1000.jpg" height="280" width="220">
+           <a href="#"><button id="btn1">Carpets</button></a>
+       </div>
+   </div>
+   <div class="become">
+       <div class="split"> 
+           
+       </div>
+       <div class="split-1">
+       <h1 id="firsthead">Become a reseller and</h1>
+       <h1 id="secondhead">Start your Online Business
+           with Zero Investment</h1>
+       <div class="logos">
+
+           <div>
+               
+           </div>
+           <div>
+             <a href="https://play.google.com/store/apps/details?id=com.meesho.supply">
+               <img src="https://images.meesho.com/images/pow/playstore-icon.webp"
+                 width="100%" 
+                 id="android" 
+                 alt="PlayStore"
+               >
+             </a>
+           </div>
+           <div >
+             <a  href="https://apps.apple.com/us/app/meesho/id1457958492">
+               <img src="https://images.meesho.com/images/pow/appstore-icon.webp" 
+                 id="apple" 
+                 width ="100%" 
+                 alt="AppleStore"
+               >
+             </a>
+           </div>
+       </div>    
+       </div>
+   </div>
+
+   <div class="final">
+       <div class="textreg">
+           <h1>Register as a Meesho Supplier</h1>
+           
+           <h6 id="sell">Sell your products to crores of customers at 0% commission</h6>
+       </div>
+       <div class="threeboxes">
+           <div>
+               <span class="material-icons">
+                   check_circle
+                   </span><h6>Grow Your Business 10X</h6>
+           </div>
+           <div class="dash">
+               |
+           </div>
+           <div>
+               <span class="material-icons">
+                   check_circle
+                   </span><h6>Enjoy 100% Profit</h6>
+           </div>
+           <div class="dash">
+               |
+           </div>
+           <div>
+               <span class="material-icons">
+                   check_circle
+                   </span><h6 >Sell all over India</h6>
+           </div>
+       </div>
+       <div class="signup" id="signup">
+           <button id="signup-btn"><h5>Sign up now</h5></button>
+       </div>
+   </div>
+   <!-- Footer -->
+   <div id="footer">
+     <div>
+         <h2>Shop No-Stop on Meesho</h2>
+         <p>Trusted by more than 1 Crore Indians
+          Cash on Delivery | Free Delivery</p>
+          <img src="https://images.meesho.com/images/pow/playstore-icon.webp"; alt="" width="47%">
+          <img style="height:50px ;" src="https://images.meesho.com/images/pow/appstore-icon.webp" alt="" width="47%
+          ">
+     </div>
+     <div>
+         <a href="">Careers</a>
+         <a href="">Become a supplier</a>
+     </div>
+     <div>
+         <a href="">Legal And Policies</a>
+         <a href="">Meesho Tech Blog</a>
+     </div>
+     <div>
+         <a href=""><h3>Contact Us</h3></a>
+         <a href="">query@meesho.com</a>
+     </div>
+     <div>
+         <a href="">Reach out to us</a>
+         <img src="https://meesho.com/assets/facebook.png" alt="">
+         <img src="https://meesho.com/assets/instagram.png" alt="">
+         <img src="https://meesho.com/assets/youtube.png" alt="">
+         <img src="https://meesho.com/assets/linkedin.png" alt="">
+         <img src="https://meesho.com/assets/twitter.png" alt="">
+
+     </div>
+
+ 
+</body>
